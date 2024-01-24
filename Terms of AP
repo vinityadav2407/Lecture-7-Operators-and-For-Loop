@@ -1,0 +1,34 @@
+Problem statement:-
+Write a program to print first x terms of the series 3N + 2 which are not multiples of 4.
+
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= x <= 1,000
+>>>>>
+>>>>>
+Solution:->
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int i=1;
+int j=1;
+int count=n;
+while(i<=count){
+	int t=(3*j+2);
+
+	if(t%4==0){
+		j++;
+	}
+	else if(t%4!=0){
+		System.out.print(t+" ");
+		j++;
+		i++;
+	}
+//	i++;
+}
+	}
+}
