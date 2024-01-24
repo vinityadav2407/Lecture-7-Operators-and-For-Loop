@@ -1,0 +1,37 @@
+Problem statement:-
+Write a program that asks the user for a number N and a choice C. And then give them the possibility to choose between computing the sum and computing the product of all integers in the range 1 to N (both inclusive).
+If C is equal to -
+ 1, then print the sum
+ 2, then print the product
+ Any other number, then print '-1' (without the quotes)
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+1 <= N <= 12
+>>>>>
+>>>>
+Solution:->>>
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// Write your code here
+Scanner s=new Scanner(System.in);
+int n=s.nextInt();
+int choice=s.nextInt();
+int sum=0,mult=1,i;
+for(i=1; i<=n;i++){
+	sum=sum+i;
+	mult=mult*i;
+}
+if(choice==1){
+	System.out.println(sum);
+}
+else if(choice==2){
+	System.out.println(mult);
+}
+else{
+	System.out.println(-1);
+}
+
+	}
+}
