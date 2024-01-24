@@ -1,0 +1,40 @@
+Problem statement:-
+Given a binary number as an integer N, convert it into decimal and print.
+
+Detailed explanation ( Input/output format, Notes, Images )
+Constraints :
+0 <= N <= 10^9
+Sample Input 1 :
+1100
+Sample Output 1 :
+12
+Sample Input 2 :
+111
+Sample Output 2 :
+7
+>>>>>
+>>>>>
+Solution:->>.
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// Write your code here
+		Scanner s = new Scanner(System.in);
+		int n = s.nextInt();
+		int d = 0;
+		int base = 1;
+		int r = n;
+		while (n > 0) {
+			r = n % 10;
+			d = d + (r * base);
+
+			n = n / 10;
+			base = base * 2;
+		}
+		System.out.println(d);
+	}
+}
+
+
